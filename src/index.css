@@ -3,5 +3,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  color: #eee;
+  color: var(--rs-text-primary)!important;
+}
+
+.rs-anim-fade.rs-anim-in{
+  z-index: 5;
 }

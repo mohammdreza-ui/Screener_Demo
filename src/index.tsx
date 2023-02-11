@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { ScrollToTop } from "components/actions/scroll-to-top";
+import { ScrollToTop } from "components/actions/scroll-to-top/scroll-to-top";
 
 ReactDOM.render(
   <React.StrictMode>
