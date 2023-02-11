@@ -122,13 +122,14 @@ export const Main = () => {
     setDataDefault(copy);
   }, [search]);
   
-  const [dataa, setDataa] = useState(dataDefault);
-
-  const data = dataDefault.filter((v, i) => {
+  const data = originalData.filter((v, i) => {
     const start = limit * (page - 1);
     const end = start + limit;
     return i >= start && i < end;
   });
+
+  const [dataa, setDataa] = useState(originalData);
+
 
   const [triggerSort, setTriggerSort] = useState(false);
   const handleSortColumn = useCallback((sortColumn: any, sortType: any) => {
@@ -331,8 +332,8 @@ export const Main = () => {
 
 
   useEffect(() => {
-    setDataa(sortData(originalData, sortColumn, sortType, defaultColumns));
-  }, [triggerSort]);
+    setDataa(sortData(dataDefault, sortColumn, sortType, defaultColumns));
+  }, [triggerSort, dataDefault]);
 
   return (
     <section className="container-fluid mt-4">
